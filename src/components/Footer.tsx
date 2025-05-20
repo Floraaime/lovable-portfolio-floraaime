@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-portfolio-purple font-medium text-xl mb-4 md:mb-0">
-            Your Name
+            Flora Aimê
           </div>
           
           <div className="text-sm text-gray-500">

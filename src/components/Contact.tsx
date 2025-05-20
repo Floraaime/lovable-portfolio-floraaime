@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">Vamos conversar?</h2>
           <p className="text-lg text-gray-600">
-            I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+            Me chama no e-mail, bater papo no LinkedIn ou mandar mensagem.
           </p>
         </div>
         
@@ -19,8 +19,8 @@ const Contact = () => {
               <Mail className="text-portfolio-purple" size={24} />
             </div>
             <h3 className="text-lg font-medium mb-2">Email</h3>
-            <a href="mailto:yourname@example.com" className="text-portfolio-purple hover:underline">
-              yourname@example.com
+            <a href="mailto:floraimedesign@gmail.com" className="text-portfolio-purple hover:underline">
+              floraimedesign@gmail.com
             </a>
           </div>
           
@@ -29,8 +29,8 @@ const Contact = () => {
               <Linkedin className="text-portfolio-purple" size={24} />
             </div>
             <h3 className="text-lg font-medium mb-2">LinkedIn</h3>
-            <a href="https://linkedin.com/in/yourname" className="text-portfolio-purple hover:underline">
-              /in/yourname
+            <a href="https://linkedin.com/in/floraime" className="text-portfolio-purple hover:underline">
+              /in/floraime
             </a>
           </div>
           
@@ -39,8 +39,8 @@ const Contact = () => {
               <Phone className="text-portfolio-purple" size={24} />
             </div>
             <h3 className="text-lg font-medium mb-2">Phone</h3>
-            <a href="tel:+123456789" className="text-portfolio-purple hover:underline">
-              +1 (234) 567-890
+            <a href="tel:+5583988581286" className="text-portfolio-purple hover:underline">
+              55 83 98858-1286
             </a>
           </div>
         </div>

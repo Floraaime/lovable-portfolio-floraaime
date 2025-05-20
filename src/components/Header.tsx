@@ -16,7 +16,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center">
           <div className="text-portfolio-purple font-medium text-xl">
-            <Link to="/">Your Name</Link>
+            <Link to="/">Flora Aimê</Link>
           </div>
 
           {/* Desktop navigation */}
@@ -34,7 +34,7 @@ const Header = () => {
               Contact
             </a>
             <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
-              Resume
+              Ver Currículo
             </Button>
           </nav>
 
@@ -80,7 +80,7 @@ const Header = () => {
                 Contact
               </a>
               <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white w-full">
-                Resume
+                Ver Currículo
               </Button>
             </div>
           </nav>

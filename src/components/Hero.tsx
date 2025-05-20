@@ -10,16 +10,15 @@ const Hero = () => {
           <div className="md:col-span-7 space-y-6 animate-fade-in">
             <div className="text-sm text-gray-500">UI/UX Design | Graphic Design</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-              Olá! <span className="text-portfolio-purple">I'm Your Name</span> 👋
+              Olá! <span className="text-portfolio-purple">Sou Flora Aimê</span> 👋
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl">
-              My work focuses on creating intuitive experiences that carry meaning
-              and make people's lives easier. I specialize in crafting beautiful
-              and functional digital products.
+              Meu trabalho é criar experiências intuitivas que carregam significado
+              e facilitam a vida das pessoas
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
-                View Projects
+                Ver Currículo
               </Button>
               <Button variant="outline" className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple/10">
                 Contact Me
@@ -30,7 +29,7 @@ const Hero = () => {
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-light-purple/20">
               <img 
                 src="/placeholder.svg" 
-                alt="Your Name" 
+                alt="Flora Aimê" 
                 className="w-full h-full object-cover"
               />
             </div>

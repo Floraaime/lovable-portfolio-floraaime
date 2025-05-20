@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Star } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
@@ -24,11 +25,9 @@ const Skills = () => {
       <div className="container-custom">
         <div className="flex items-center mb-12">
           <div className="w-6 h-6 rounded-full bg-portfolio-purple flex items-center justify-center mr-3">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 16L12 8M12 8L16 12M12 8L8 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <Star className="text-white" size={12} />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold">My Skills</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">Minhas Habilidades</h2>
         </div>
         
         <div className="flex flex-wrap gap-3">
