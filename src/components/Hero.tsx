@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="md:col-span-7 space-y-6 animate-fade-in">
             <div className="text-sm text-gray-500">UI/UX Design | Graphic Design</div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-              Olá! <span className="text-portfolio-purple">I'm Your Name</span> 👋
+              Olá! <span className="text-portfolio-purple">Me chamo Flora</span> 👋
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl">
               My work focuses on creating intuitive experiences that carry meaning
