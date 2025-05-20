@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="md:col-span-5 animate-fade-in flex justify-center md:justify-end">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-portfolio-light-purple/20">
               <img 
-                src="/placeholder.svg" 
+                src="/lovable-uploads/ef8e88e2-8fdc-4b52-bbf6-753f578cb3b9.png" 
                 alt="Flora Aimê" 
                 className="w-full h-full object-cover"
               />
