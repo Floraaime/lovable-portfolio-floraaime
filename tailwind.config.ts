@@ -1,13 +1,14 @@
+
 import type { Config } from "tailwindcss";
-import { flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 // This function adds each Tailwind color as a global CSS variable, e.g. var(--sky-500)
 function addVariablesForColors({ addBase, theme }: any) {
-  if (!addBase || !theme) {
+  // Add null checks to prevent errors
+  if (!addBase || !theme || typeof theme !== 'function') {
     return;
   }
   
-  let allColors = flattenColorPalette(theme("colors"));
+  let allColors = flattenColorPalette(theme("colors") || {});
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
@@ -17,11 +18,13 @@ function addVariablesForColors({ addBase, theme }: any) {
   });
 }
 
-// Helper function imported from tailwind to flatten the color palette
+// Helper function to flatten the color palette
 function flattenColorPalette(colors: any) {
   const result: Record<string, string> = {};
   
   const flatten = (obj: any, prefix = '') => {
+    if (!obj) return;
+    
     for (const key in obj) {
       const value = obj[key];
       
@@ -37,7 +40,7 @@ function flattenColorPalette(colors: any) {
   return result;
 }
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -146,4 +149,6 @@ export default {
     require("tailwindcss-animate"),
     addVariablesForColors
   ],
-} satisfies Config;
+};
+
+export default config;
