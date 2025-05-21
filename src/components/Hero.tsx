@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Button as MovingButton } from '@/components/ui/moving-border';
 import { BlurFade } from '@/components/ui/blur-fade';
 
 const Hero = () => {
@@ -26,9 +27,13 @@ const Hero = () => {
                 <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
                   Ver Currículo
                 </Button>
-                <Button variant="outline" className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple/10">
-                  Contact Me
-                </Button>
+                <MovingButton 
+                  borderRadius="0.5rem"
+                  className="bg-white/10 text-white border-portfolio-purple w-40 h-10"
+                  borderClassName="bg-[radial-gradient(var(--portfolio-purple)_40%,transparent_60%)]"
+                >
+                  Meus Contatos
+                </MovingButton>
               </div>
             </BlurFade>
           </div>
