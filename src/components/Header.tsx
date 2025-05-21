@@ -22,16 +22,16 @@ const Header = () => {
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              About
+              Sobre
             </a>
             <a href="#projects" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Projects
+              Projetos
             </a>
             <a href="#skills" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Skills
+              Habilidades
             </a>
             <a href="#contact" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Contact
+              Contato
             </a>
             <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
               Ver Currículo
@@ -56,28 +56,28 @@ const Header = () => {
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                About
+                Sobre
               </a>
               <a 
                 href="#projects" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Projects
+                Projetos
               </a>
               <a 
                 href="#skills" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Skills
+                Habilidades
               </a>
               <a 
                 href="#contact" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Contact
+                Contato
               </a>
               <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white w-full">
                 Ver Currículo
