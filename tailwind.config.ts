@@ -1,17 +1,57 @@
 
 import type { Config } from "tailwindcss";
-import { flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 // This function adds each Tailwind color as a global CSS variable, e.g. var(--sky-500)
 function addVariablesForColors({ addBase, theme }: any) {
-	let allColors = flattenColorPalette(theme("colors"));
-	let newVars = Object.fromEntries(
-		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-	);
+	if (!theme || typeof theme !== 'function') {
+		console.error('Theme function is undefined or not a function');
+		return;
+	}
 
-	addBase({
-		":root": newVars,
-	});
+	try {
+		let allColors = flattenColorPalette(theme("colors"));
+		let newVars = Object.fromEntries(
+			Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+		);
+
+		addBase({
+			":root": newVars,
+		});
+	} catch (error) {
+		console.error('Error in addVariablesForColors:', error);
+	}
+}
+
+// This custom function flattens the color palette to avoid issues with undefined values
+function flattenColorPalette(colors: any): Record<string, string> {
+	if (!colors || typeof colors !== 'object') {
+		return {};
+	}
+
+	const result: Record<string, string> = {};
+
+	const flattenColors = (colorObj: any, prefix = '') => {
+		if (typeof colorObj === 'string') {
+			result[prefix.slice(0, -1)] = colorObj;
+			return;
+		}
+
+		for (const key in colorObj) {
+			if (Object.prototype.hasOwnProperty.call(colorObj, key)) {
+				const value = colorObj[key];
+				const newPrefix = prefix ? `${prefix}${key}-` : `${key}-`;
+				
+				if (typeof value === 'string' || typeof value === 'number') {
+					result[prefix ? `${prefix}${key}` : key] = value.toString();
+				} else if (typeof value === 'object' && value !== null) {
+					flattenColors(value, newPrefix);
+				}
+			}
+		}
+	};
+
+	flattenColors(colors);
+	return result;
 }
 
 export default {
@@ -107,12 +147,21 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
+				},
+				'aurora': {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%",
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards'
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'aurora': 'aurora 60s linear infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif']
