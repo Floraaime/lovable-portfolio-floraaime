@@ -1,6 +1,52 @@
 
 import type { Config } from "tailwindcss";
 
+// Create a safe version of flattenColorPalette
+function flattenColorPalette(colors: Record<string, any>): Record<string, string> {
+  const result: Record<string, string> = {};
+  
+  // Helper function to flatten the colors
+  const flattenColors = (obj: Record<string, any>, prefix = '') => {
+    for (const key in obj) {
+      const value = obj[key];
+      
+      // If the value is a string (a CSS color value), add it to the result
+      if (typeof value === 'string') {
+        result[prefix + key] = value;
+      } 
+      // If it's an object, recursively flatten with a prefix
+      else if (typeof value === 'object' && value !== null) {
+        flattenColors(value, prefix ? `${prefix}-${key}` : key);
+      }
+    }
+  };
+  
+  flattenColors(colors);
+  return result;
+}
+
+// Safe addVariablesForColors function
+function addVariablesForColors({ addBase, theme }: { addBase: (obj: any) => void, theme: (path: string) => any }) {
+  try {
+    const colors = theme('colors') || {};
+    const flatColors = flattenColorPalette(colors);
+    
+    const variables = Object.fromEntries(
+      Object.entries(flatColors).map(([key, val]) => [`--${key}`, val])
+    );
+    
+    addBase({
+      ':root': variables,
+    });
+  } catch (error) {
+    console.error('Error in addVariablesForColors:', error);
+    // Provide default empty implementation to prevent crashes
+    addBase({
+      ':root': {},
+    });
+  }
+}
+
 export default {
 	darkMode: ["class"],
 	content: [
@@ -106,5 +152,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
