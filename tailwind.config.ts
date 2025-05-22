@@ -3,53 +3,44 @@ import type { Config } from "tailwindcss";
 
 // This function adds each Tailwind color as a global CSS variable, e.g. var(--sky-500)
 function addVariablesForColors({ addBase, theme }: any) {
-  try {
-    // Safely get the color palette
-    const colors = theme('colors') || {};
-    
-    // Function to manually flatten the color palette
-    function manuallyFlattenColorPalette(colors: Record<string, any>) {
-      const result: Record<string, string> = {};
-      
-      // Process each color
-      Object.entries(colors).forEach(([colorName, colorValue]) => {
-        if (typeof colorValue === 'string') {
-          result[colorName] = colorValue;
-        } else if (typeof colorValue === 'object' && colorValue !== null) {
-          // Handle nested color objects (like blue.500)
-          Object.entries(colorValue).forEach(([shade, value]) => {
-            if (typeof value === 'string') {
-              result[`${colorName}-${shade}`] = value;
-            }
-          });
-        }
-      });
-      
-      return result;
-    }
-    
-    // Use our manual flattening function
-    const allColors = manuallyFlattenColorPalette(colors);
-    
-    // Create CSS variables
-    const cssVariables = Object.fromEntries(
-      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-    );
-
-    // Add the variables to the :root
-    addBase({
-      ':root': cssVariables,
-    });
-  } catch (error) {
-    console.error('Error in addVariablesForColors:', error);
-    // Provide fallback behavior
-    addBase({
-      ':root': {},
-    });
+  // Add null checks to prevent errors
+  if (!addBase || !theme || typeof theme !== 'function') {
+    return;
   }
+  
+  let allColors = flattenColorPalette(theme("colors") || {});
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
 }
 
-export default {
+// Helper function to flatten the color palette
+function flattenColorPalette(colors: any) {
+  const result: Record<string, string> = {};
+  
+  const flatten = (obj: any, prefix = '') => {
+    if (!obj) return;
+    
+    for (const key in obj) {
+      const value = obj[key];
+      
+      if (typeof value === 'string') {
+        result[prefix + key] = value;
+      } else {
+        flatten(value, `${prefix}${key}-`);
+      }
+    }
+  };
+  
+  flatten(colors);
+  return result;
+}
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -158,4 +149,6 @@ export default {
     require("tailwindcss-animate"),
     addVariablesForColors
   ],
-} satisfies Config;
+};
+
+export default config;
