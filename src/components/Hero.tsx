@@ -26,7 +26,7 @@ const Hero = () => {
                 Ver Currículo
               </Button>
               <Button variant="outline" className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple/10">
-                Contact Me
+                Meus contatos
               </Button>
             </div>
           </div>
