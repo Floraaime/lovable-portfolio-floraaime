@@ -1,0 +1,54 @@
+{
+  "header": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "resume": "View Resume"
+  },
+  "projects": {
+    "title": "My Work",
+    "project_1_title": "ReciclaSim",
+    "project_1_category": "Coder House Case Study",
+    "project_1_description": "A sustainability project focused on recycling education and awareness.",
+    "project_2_title": "ReciclaSim",
+    "project_2_category": "Coder House Case Study",
+    "project_2_description": "A sustainability project focused on recycling education and awareness."
+  },
+  "hero": {
+    "sub_title": "UI/UX Design | Graphic Design",
+    "title": "Hi! I'm Flora Aimê",
+    "description": "My work is to create intuitive experiences that carry meaning and make people's lives easier",
+    "resume_button": "View Resume",
+    "contact_button": "My contacts"
+  },
+  "skills": {
+    "title": "My Skills",
+    "skill_list": [
+      "UX/UI Design",
+      "User Journey",
+      "Information Architecture",
+      "Personas",
+      "A/B Testing",
+      "Design System",
+      "UX Research",
+      "Usability Testing",
+      "Critical thinking",
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "Prototyping",
+      "User Testing"
+    ]
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "description": "Call me on email, chat on LinkedIn or send a message.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+} 

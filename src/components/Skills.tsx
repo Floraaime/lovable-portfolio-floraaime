@@ -1,24 +1,11 @@
-
 import React from 'react';
 import { Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
-  const skills = [
-    "UX/UI Design",
-    "Jornada do Usuário",
-    "Arquitetura da Informação",
-    "Personas",
-    "Teste A/B",
-    "Design System",
-    "UX Research",
-    "Teste de Usabilidade",
-    "Pensamento crítico",
-    "Figma",
-    "Adobe XD",
-    "Sketch",
-    "Prototyping",
-    "User Testing"
-  ];
+  const { t } = useTranslation();
+  const skillsList = t('skills.skill_list', { returnObjects: true });
+  const skills = Array.isArray(skillsList) ? skillsList : [];
 
   return (
     <section id="skills" className="section-padding">
@@ -27,7 +14,7 @@ const Skills = () => {
           <div className="w-6 h-6 rounded-full bg-portfolio-purple flex items-center justify-center mr-3">
             <Star className="text-white" size={12} />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold">Minhas Habilidades</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">{t('skills.title')}</h2>
         </div>
         
         <div className="flex flex-wrap gap-3">

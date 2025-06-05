@@ -1,7 +1,8 @@
-
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-gray-500">
-            &copy; {currentYear} All rights reserved.
+            &copy; {currentYear} {t('footer.rights')}
           </div>
         </div>
       </div>

@@ -1,14 +1,19 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -22,19 +27,28 @@ const Header = () => {
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Sobre
+              {t('header.about')}
             </a>
             <a href="#projects" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Projetos
+              {t('header.projects')}
             </a>
             <a href="#skills" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Habilidades
+              {t('header.skills')}
             </a>
             <a href="#contact" className="text-gray-600 hover:text-portfolio-purple transition-colors">
-              Contato
+              {t('header.contact')}
             </a>
-            <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
-              Ver Currículo
+            <a href="/resume.pdf" download>
+              <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white">
+                {t('header.resume')}
+              </Button>
+            </a>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => changeLanguage(i18n.language === 'en' ? 'pt' : 'en')}
+            >
+              {i18n.language === 'en' ? 'PT' : 'EN'}
             </Button>
           </nav>
 
@@ -56,31 +70,41 @@ const Header = () => {
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Sobre
+                {t('header.about')}
               </a>
               <a 
                 href="#projects" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Projetos
+                {t('header.projects')}
               </a>
               <a 
                 href="#skills" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Habilidades
+                {t('header.skills')}
               </a>
               <a 
                 href="#contact" 
                 className="text-gray-600 hover:text-portfolio-purple transition-colors py-2"
                 onClick={toggleMenu}
               >
-                Contato
+                {t('header.contact')}
               </a>
-              <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white w-full">
-                Ver Currículo
+              <a href="/resume.pdf" download>
+                <Button className="bg-portfolio-purple hover:bg-portfolio-dark-purple text-white w-full">
+                  {t('header.resume')}
+                </Button>
+              </a>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => changeLanguage(i18n.language === 'en' ? 'pt' : 'en')}
+              >
+                {i18n.language === 'en' ? 'Mudar para Português' : 'Switch to English'}
               </Button>
             </div>
           </nav>

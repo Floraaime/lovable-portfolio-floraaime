@@ -1,0 +1,54 @@
+{
+  "header": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato",
+    "resume": "Ver Currículo"
+  },
+  "projects": {
+    "title": "Meus trabalhos",
+    "project_1_title": "ReciclaSim",
+    "project_1_category": "Case de estudo Coder House",
+    "project_1_description": "Projeto de sustentabilidade focado na educação e conscientização sobre reciclagem.",
+    "project_2_title": "ReciclaSim",
+    "project_2_category": "Case de estudo Coder House",
+    "project_2_description": "Projeto de sustentabilidade focado na educação e conscientização sobre reciclagem."
+  },
+  "hero": {
+    "sub_title": "UI/UX Design | Design Gráfico",
+    "title": "Oi! Sou Flora Aimê",
+    "description": "Meu trabalho é criar experiências intuitivas que carregam significado e facilitam a vida das pessoas",
+    "resume_button": "Ver Currículo",
+    "contact_button": "Meus contatos"
+  },
+  "skills": {
+    "title": "Minhas Habilidades",
+    "skill_list": [
+      "UX/UI Design",
+      "Jornada do Usuário",
+      "Arquitetura da Informação",
+      "Personas",
+      "Teste A/B",
+      "Design System",
+      "UX Research",
+      "Teste de Usabilidade",
+      "Pensamento crítico",
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "Prototipagem",
+      "Teste com usuário"
+    ]
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "description": "Me chama no e-mail, bater papo no LinkedIn ou mandar mensagem.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+} 
