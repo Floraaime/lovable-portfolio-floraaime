@@ -1,29 +1,5 @@
-
 import type { Config } from "tailwindcss";
-
-// Create a safe version of flattenColorPalette
-function flattenColorPalette(colors: Record<string, any>): Record<string, string> {
-  const result: Record<string, string> = {};
-  
-  // Helper function to flatten the colors
-  const flattenColors = (obj: Record<string, any>, prefix = '') => {
-    for (const key in obj) {
-      const value = obj[key];
-      
-      // If the value is a string (a CSS color value), add it to the result
-      if (typeof value === 'string') {
-        result[prefix + key] = value;
-      } 
-      // If it's an object, recursively flatten with a prefix
-      else if (typeof value === 'object' && value !== null) {
-        flattenColors(value, prefix ? `${prefix}-${key}` : key);
-      }
-    }
-  };
-  
-  flattenColors(colors);
-  return result;
-}
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 // Safe addVariablesForColors function
 function addVariablesForColors({ addBase, theme }: { addBase: (obj: any) => void, theme: (path: string) => any }) {
@@ -140,12 +116,21 @@ export default {
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
-				}
+				},
+				aurora: {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%",
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards'
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				aurora: "aurora 60s linear infinite",
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif']

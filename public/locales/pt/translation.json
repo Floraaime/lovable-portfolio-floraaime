@@ -1,54 +1,91 @@
 {
   "header": {
-    "about": "Sobre",
-    "projects": "Projetos",
-    "skills": "Habilidades",
-    "contact": "Contato",
-    "resume": "Ver Currículo"
-  },
-  "projects": {
-    "title": "Meus trabalhos",
-    "project_1_title": "ReciclaSim",
-    "project_1_category": "Case de estudo Coder House",
-    "project_1_description": "Projeto de sustentabilidade focado na educação e conscientização sobre reciclagem.",
-    "project_2_title": "ReciclaSim",
-    "project_2_category": "Case de estudo Coder House",
-    "project_2_description": "Projeto de sustentabilidade focado na educação e conscientização sobre reciclagem."
+    "nav": {
+      "home": "Home",
+      "about": "Sobre",
+      "portfolio": "Portfólio",
+      "experience": "Experiência",
+      "contact": "Contato"
+    },
+    "langButton": {
+        "en": "EN",
+        "pt": "PT"
+    },
+    "mobileLangButton": {
+        "en": "Mudar para Inglês",
+        "pt": "Switch to Portuguese"
+    }
   },
   "hero": {
-    "sub_title": "UI/UX Design | Design Gráfico",
-    "title": "Oi! Sou Flora Aimê",
-    "description": "Meu trabalho é criar experiências intuitivas que carregam significado e facilitam a vida das pessoas",
-    "resume_button": "Ver Currículo",
-    "contact_button": "Meus contatos"
+    "title": "Product Designer (UX/UI)",
+    "description": "Designer de Produto (UX/UI) com sólida experiência na concepção e otimização de experiências de usuário para produtos digitais.",
+    "buttonProjects": "Ver Projetos",
+    "buttonCv": "Baixar CV"
   },
-  "skills": {
-    "title": "Minhas Habilidades",
-    "skill_list": [
-      "UX/UI Design",
-      "Jornada do Usuário",
-      "Arquitetura da Informação",
-      "Personas",
-      "Teste A/B",
-      "Design System",
-      "UX Research",
-      "Teste de Usabilidade",
-      "Pensamento crítico",
-      "Figma",
-      "Adobe XD",
-      "Sketch",
-      "Prototipagem",
-      "Teste com usuário"
-    ]
+  "about": {
+    "title": "Sobre Mim",
+    "passionTitle": "Minha Paixão pelo Design",
+    "desc1": "Especialista em todo o ciclo de vida do produto, desde a pesquisa e ideação até a prototipação, testes de usabilidade e implementação de Design Systems.",
+    "desc2": "Tenho habilidade comprovada em traduzir dados quantitativos e qualitativos em interfaces intuitivas e funcionais, colaborando de forma eficaz com equipes de desenvolvimento e produto para entregar soluções que alinham as necessidades dos usuários aos objetivos de negócio. Minha paixão está em transformar problemas complexos em soluções elegantes que geram um impacto mensurável. Eu defendo ativamente uma cultura centrada no usuário, garantindo que cada decisão de design seja justificada por pesquisa e contribua para uma jornada de usuário mais coesa e agradável. Esta abordagem estratégica não só eleva a satisfação e o engajamento do usuário, mas também impulsiona indicadores-chave de desempenho, como taxas de conversão e lealdade do cliente, entregando valor tangível para a empresa.",
+    "journeyTitle": "Minha Jornada",
+    "journeyLocation": "<b>Localização:</b> João Pessoa - Paraíba, Brasil",
+    "journeySpecialization": "<b>Especialização:</b> Criação de produtos digitais inovadores e centrados no usuário.",
+    "journeyCompanies": "<b>Empresas:</b> Smartpace by Digivox, Precision Data, Aicury.",
+    "quickFactsTitle": "Fatos Rápidos",
+    "quickFactsLocation": "<b>Localização:</b> Brasil",
+    "quickFactsExperience": "<b>Experiência:</b> Mais de 2 anos (desde Nov/2022)",
+    "quickFactsProjects": "<b>Projetos:</b> 15+ Concluídos",
+    "quickFactsLearning": "<b>Aprendizado:</b> Contínuo",
+    "coreSkillsTitle": "Habilidades Essenciais",
+    "toolsTitle": "Ferramentas que Domino"
+  },
+  "portfolio": {
+    "title": "Portfólio de Projetos",
+    "description": "Cada projeto demonstra a solução de problemas através do design thinking, pesquisa com usuários e soluções baseadas em dados.",
+    "buttonBehance": "Visualizar Portfólio Completo no Behance",
+    "project1_title": "Otimização da Experiência do Usuário na Smartpace",
+    "project1_type": "Web App",
+    "project1_desc": "Liderança no desenvolvimento e otimização contínua da experiência do usuário em produtos digitais, resultando em maior engajamento.",
+    "project2_title": "Plataforma de Análise de Dados - Precision Data",
+    "project2_type": "Web App",
+    "project2_desc": "Aprimoramento da experiência do usuário e desenvolvimento de protótipos de alta fidelidade para uma plataforma de dados complexa.",
+    "project3_title": "Interface para App de E-commerce - Aicury",
+    "project3_type": "Mobile App",
+    "project3_desc": "Criação de interfaces responsivas e visualmente atraentes para um aplicativo de e-commerce, com foco na conversão.",
+    "buttonPdf": "Visualizar PDF",
+    "buttonBehanceLink": "Behance"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "description": "Uma jornada de crescimento e soluções de design impactantes.",
+    "job1_role": "Product Designer (UX/UI)",
+    "job1_company": "Smartpace by Digivox",
+    "job1_period": "Mar 2024 - Present",
+    "job1_desc": "Liderança no desenvolvimento e otimização da experiência do usuário, análise estratégica baseada em dados, criação de interfaces responsivas e gestão do Design System da empresa.",
+    "job2_role": "UX/UI Designer",
+    "job2_company": "Precision Data",
+    "job2_period": "Apr 2023 - Feb 2024",
+    "job2_desc": "Aprimoramento da experiência do usuário, desenvolvimento de protótipos de alta fidelidade, condução de pesquisas com usuários e contribuição na implementação do Design System.",
+    "job3_role": "UI Designer Freelancer",
+    "job3_company": "Aicury",
+    "job3_period": "Nov 2022 - Mar 2023",
+    "job3_desc": "Criação de interfaces responsivas e visualmente atraentes, colaboração com stakeholders e desenvolvimento de protótipos interativos para validar fluxos de navegação."
   },
   "contact": {
-    "title": "Vamos conversar?",
-    "description": "Me chama no e-mail, bater papo no LinkedIn ou mandar mensagem.",
+    "title": "Vamos nos conectar!",
+    "description": "Pronta para colaborar no seu próximo projeto? Adoraria ouvir sobre seus desafios de design e como podemos resolvê-los juntos.",
+    "getInTouch": "Entre em Contato",
     "email": "Email",
+    "phone": "Telefone",
     "linkedin": "LinkedIn",
-    "whatsapp": "WhatsApp"
+    "quickMessage": "Mensagem Rápida",
+    "formName": "Seu nome",
+    "formEmail": "seu@email.com",
+    "formMessage": "Fale-me sobre o seu projeto...",
+    "buttonSend": "Enviar Mensagem",
+    "buttonWhatsapp": "Enviar via WhatsApp"
   },
   "footer": {
-    "rights": "Todos os direitos reservados."
+    "copyright": "Flora Aimê Barbosa Brandão de Sousa. Todos os direitos reservados."
   }
 } 

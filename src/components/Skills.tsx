@@ -1,34 +1,27 @@
 import React from 'react';
-import { Star } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Badge } from '@/components/ui/badge';
 
-const Skills = () => {
-  const { t } = useTranslation();
-  const skillsList = t('skills.skill_list', { returnObjects: true });
-  const skills = Array.isArray(skillsList) ? skillsList : [];
+interface SkillsProps {
+  title: string;
+  skills: string[];
+  icon?: React.ReactNode;
+}
 
+const Skills: React.FC<SkillsProps> = ({ title, skills, icon }) => {
   return (
-    <section id="skills" className="section-padding">
-      <div className="container-custom">
-        <div className="flex items-center mb-12">
-          <div className="w-6 h-6 rounded-full bg-portfolio-purple flex items-center justify-center mr-3">
-            <Star className="text-white" size={12} />
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold">{t('skills.title')}</h2>
-        </div>
-        
-        <div className="flex flex-wrap gap-3">
-          {skills.map((skill, index) => (
-            <div 
-              key={index}
-              className="px-5 py-2 bg-white rounded-full border border-gray-200 text-gray-800 hover:bg-portfolio-purple hover:text-white transition-colors cursor-default"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+    <div>
+      <h3 className="text-2xl font-bold mb-6 flex items-center">
+        {icon && <span className="mr-3">{icon}</span>}
+        {title}
+      </h3>
+      <div className="flex flex-wrap gap-3">
+        {skills.map((skill, index) => (
+          <Badge key={index} variant="secondary" className="text-base px-4 py-2">
+            {skill}
+          </Badge>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

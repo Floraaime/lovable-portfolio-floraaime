@@ -1,54 +1,91 @@
 {
   "header": {
-    "about": "About",
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact",
-    "resume": "View Resume"
-  },
-  "projects": {
-    "title": "My Work",
-    "project_1_title": "ReciclaSim",
-    "project_1_category": "Coder House Case Study",
-    "project_1_description": "A sustainability project focused on recycling education and awareness.",
-    "project_2_title": "ReciclaSim",
-    "project_2_category": "Coder House Case Study",
-    "project_2_description": "A sustainability project focused on recycling education and awareness."
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "langButton": {
+      "en": "EN",
+      "pt": "PT"
+    },
+    "mobileLangButton": {
+      "en": "Switch to English",
+      "pt": "Mudar para Português"
+    }
   },
   "hero": {
-    "sub_title": "UI/UX Design | Graphic Design",
-    "title": "Hi! I'm Flora Aimê",
-    "description": "My work is to create intuitive experiences that carry meaning and make people's lives easier",
-    "resume_button": "View Resume",
-    "contact_button": "My contacts"
+    "title": "Product Designer (UX/UI)",
+    "description": "Product Designer (UX/UI) with solid experience in designing and optimizing user experiences for digital products.",
+    "buttonProjects": "View Projects",
+    "buttonCv": "Download CV"
   },
-  "skills": {
-    "title": "My Skills",
-    "skill_list": [
-      "UX/UI Design",
-      "User Journey",
-      "Information Architecture",
-      "Personas",
-      "A/B Testing",
-      "Design System",
-      "UX Research",
-      "Usability Testing",
-      "Critical thinking",
-      "Figma",
-      "Adobe XD",
-      "Sketch",
-      "Prototyping",
-      "User Testing"
-    ]
+  "about": {
+    "title": "About Me",
+    "passionTitle": "My Passion for Design",
+    "desc1": "Specialist in the entire product lifecycle, from research and ideation to prototyping, usability testing, and the implementation of Design Systems.",
+    "desc2": "I have a proven ability to translate quantitative and qualitative data into intuitive and functional interfaces, collaborating effectively with development and product teams to deliver solutions that align user needs with business goals. My passion lies in transforming complex problems into elegant solutions that have a measurable impact. I actively champion a user-centered culture, ensuring that every design decision is justified by research and contributes to a more cohesive and enjoyable user journey. This strategic approach not only enhances user satisfaction and engagement but also drives key performance indicators, such as conversion rates and customer loyalty, delivering tangible value to the business.",
+    "journeyTitle": "My Journey",
+    "journeyLocation": "<b>Location:</b> João Pessoa - Paraíba, Brazil",
+    "journeySpecialization": "<b>Specialization:</b> Creating innovative and user-centered digital products.",
+    "journeyCompanies": "<b>Companies:</b> Smartpace by Digivox, Precision Data, Aicury.",
+    "quickFactsTitle": "Quick Facts",
+    "quickFactsLocation": "<b>Location:</b> Brazil",
+    "quickFactsExperience": "<b>Experience:</b> Over 2 years (since Nov 2022)",
+    "quickFactsProjects": "<b>Projects:</b> 15+ Completed",
+    "quickFactsLearning": "<b>Learning:</b> Continuous",
+    "coreSkillsTitle": "Core Skills",
+    "toolsTitle": "Tools I Master"
+  },
+  "portfolio": {
+    "title": "Project Portfolio",
+    "description": "Each project demonstrates problem-solving through design thinking, user research, and data-driven solutions.",
+    "buttonBehance": "View Full Portfolio on Behance",
+    "project1_title": "User Experience Optimization at Smartpace",
+    "project1_type": "Web App",
+    "project1_desc": "Led the development and continuous optimization of the user experience in digital products, resulting in higher engagement.",
+    "project2_title": "Data Analysis Platform - Precision Data",
+    "project2_type": "Web App",
+    "project2_desc": "Enhanced the user experience and developed high-fidelity prototypes for a complex data platform.",
+    "project3_title": "E-commerce App Interface - Aicury",
+    "project3_type": "Mobile App",
+    "project3_desc": "Created responsive and visually appealing interfaces for an e-commerce application, with a focus on conversion.",
+    "buttonPdf": "View PDF",
+    "buttonBehanceLink": "Behance"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "description": "A journey of growth and impactful design solutions.",
+    "job1_role": "Product Designer (UX/UI)",
+    "job1_company": "Smartpace by Digivox",
+    "job1_period": "Mar 2024 - Present",
+    "job1_desc": "Leadership in the development and optimization of user experience, data-driven strategic analysis, creation of responsive interfaces, and management of the company's Design System.",
+    "job2_role": "UX/UI Designer",
+    "job2_company": "Precision Data",
+    "job2_period": "Apr 2023 - Feb 2024",
+    "job2_desc": "Improved user experience, developed high-fidelity prototypes, conducted user research, and contributed to the implementation of the Design System.",
+    "job3_role": "UI Designer Freelancer",
+    "job3_company": "Aicury",
+    "job3_period": "Nov 2022 - Mar 2023",
+    "job3_desc": "Created responsive and visually appealing interfaces, collaborated with stakeholders, and developed interactive prototypes to validate navigation flows."
   },
   "contact": {
-    "title": "Let's talk?",
-    "description": "Call me on email, chat on LinkedIn or send a message.",
+    "title": "Let's Connect!",
+    "description": "Ready to collaborate on your next project? I'd love to hear about your design challenges and how we can solve them together.",
+    "getInTouch": "Get in Touch",
     "email": "Email",
+    "phone": "Phone",
     "linkedin": "LinkedIn",
-    "whatsapp": "WhatsApp"
+    "quickMessage": "Quick Message",
+    "formName": "Your name",
+    "formEmail": "your@email.com",
+    "formMessage": "Tell me about your project...",
+    "buttonSend": "Send Message",
+    "buttonWhatsapp": "Send via WhatsApp"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "copyright": "Flora Aimê Barbosa Brandão de Sousa. All rights reserved."
   }
 } 
